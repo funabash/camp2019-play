@@ -1,0 +1,16 @@
+@import helper._
+
+
+@main("Welcome to Play") {
+  <h1>Welcome to Play!</h1>
+
+
+
+  @form(action = routes.HomeController.result()) {
+  <input type="text" name="name" value="hogehoge">
+  <input type="submit" >
+  }
+
+
+
+}
