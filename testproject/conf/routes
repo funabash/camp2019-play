@@ -7,7 +7,7 @@
 GET     /                           controllers.HomeController.index
 
 +nocsrf
-POST     /result                           controllers.HomeController.result
+POST     /recommend                           controllers.RecommendController.get
 
 
 # Map static resources from the /public folder to the /assets URL path
