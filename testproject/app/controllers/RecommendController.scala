@@ -33,7 +33,7 @@ class RecommendController @Inject()(cc: ControllerComponents) extends AbstractCo
 
   def get() = Action { implicit request: Request[AnyContent] =>
 
-    if (request.body.asFormUrlEncoded.get("name") == null) Ok(views.html.index())
+    if (request.body.asFormUrlEncoded.get("name") == null) Ok("{\"OK\":false}")
     val paramName = request.body.asFormUrlEncoded.get("name")(0)
 
 
@@ -52,7 +52,6 @@ class RecommendController @Inject()(cc: ControllerComponents) extends AbstractCo
     //val result: List[String] = exec(Seq(cmd, "/c", "dir")).out
 
     val result = Process(cmd).lines.toList
-
 
     val retJson = new StringBuilder
 
